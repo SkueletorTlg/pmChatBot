@@ -25,7 +25,7 @@ async def start(bot, update):
 
     await bot.send_message(
         chat_id=update.chat.id,
-        text=language/ES.json.format(update.from_user.first_name),
+        text=commands.start.php.format(update.from_user.first_name),
         reply_markup=InlineKeyboardMarkup(
             [
                 [
