@@ -20,5 +20,5 @@ $Bot->command("/\/link/", function ($Update, $Match) use ($Bot, $db, $tur, $LANG
         return;
     }
         
-    $Bot->sendMessage(["chat_id" => $Update["message"]["chat"]["id"], "parse_mode" => "markdown", "text" => "*İşte aradığınız kullanıcı:* [" . $fid["fname"] . "](tg://user?id=" . $fid["fid"] . ")\n*Kullanıcı adı:* @" . $fid["fusername"]]);
+    $Bot->sendMessage(["chat_id" => $Update["message"]["chat"]["id"], "parse_mode" => "markdown", "text" => "*Aquí está el usuario que está buscando:* [" . $fid["fname"] . "](tg://user?id=" . $fid["fid"] . ")\n*Nombre de usuario:* @" . $fid["fusername"]]);
 });
