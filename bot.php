@@ -10,14 +10,14 @@ if (file_exists(__DIR__ . '/.env')) {
 
 
 if (file_exists(__DIR__ . '/language/default.json')) {
-    $LANG = json_decode(file_get_contents("./language/default.json"), true);
+    $LANG = json_decode(file_get_contents("./language/ES.json"), true);
 } else {
     $LANG = json_decode('{
-        "START": "Merhaba! Bu botu @Fusuf\'a ulaşmak için kullanabilirsiniz. Mesaj/ses/sticker/gif/dosya/fotoğraf atabilirsiniz. Admin\'im bunu en yakın zamanda görüp cevaplıyacaktır.",
-        "ERROR_REPLY": "*Lütfen bir mesaja yanıt ver.*",
-        "ERROR_NOTFOUND": "*Mesaj veritabanında bulunamadı. Yanıt gönderemezsiniz.*",
-        "SENDER": "*Gönderen kişi:*"
-    }', true);
+    "START": "Hola, puedes enviar un mensaje a mi propietario con este bot. Puede enviar cualquier medio. ¡Mi propietario responderá tu mensaje lo antes posible!",
+    "ERROR_REPLY": "*Responde un mensaje.*",
+    "ERROR_NOTFOUND": "*Mensaje no encontrado en la base de datos. No puedo responder.*",
+    "SENDER": "*Remitente:*"
+}', true);
 }
 
 if (empty(getenv("ADMIN_ID"))) {
